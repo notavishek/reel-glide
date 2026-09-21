@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reel Glide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <!-- ── Header ──────────────────────────────────────────────────────────── -->
+  <header class="header">
+    <div class="logo-wrap">
+      <div class="logo-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M5 3l14 9-14 9V3z" fill="url(#g1)"/>
+          <path d="M7 20l10-2" stroke="url(#g2)" stroke-width="2" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="g1" x1="5" y1="3" x2="19" y2="21" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#B06EFF"/>
+              <stop offset="100%" stop-color="#FF6FD8"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="7" y1="20" x2="17" y2="18" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#B06EFF"/>
+              <stop offset="100%" stop-color="#FF6FD8"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div>
+        <h1 class="logo-title">Reel Glide</h1>
+        <p class="logo-sub">Instagram Auto Scroll</p>
+      </div>
+    </div>
+    <div class="status-badge" id="statusBadge">
+      <span class="status-dot" id="statusDot"></span>
+      <span id="statusText">Active</span>
+    </div>
+  </header>
+
+  <!-- ── Main Toggle ──────────────────────────────────────────────────────── -->
+  <section class="card main-toggle-card">
+    <div class="toggle-row">
+      <div>
+        <p class="label">Auto Scroll</p>
+        <p class="desc">Scroll to next reel when current ends</p>
+      </div>
+      <label class="toggle" for="enabledToggle">
+        <input type="checkbox" id="enabledToggle" checked />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </section>
+
+  <!-- ── Settings ─────────────────────────────────────────────────────────── -->
+  <section class="card settings-card">
+    <h2 class="section-title">Settings</h2>
+
+    <!-- Delay slider -->
+    <div class="setting-row">
+      <div class="setting-header">
+        <span class="setting-label">Scroll Delay</span>
+        <span class="setting-value" id="delayValue">0.5s</span>
+      </div>
+      <div class="slider-track-wrap">
+        <input type="range" class="range-slider" id="delaySlider"
+               min="0" max="3000" step="100" value="500" />
+        <div class="range-labels">
+          <span>Instant</span>
+          <span>3 sec</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Loop toggle -->
+    <div class="toggle-row">
+      <div>
+        <p class="label">Loop Reels</p>
+        <p class="desc">Restart from top when feed ends</p>
+      </div>
+      <label class="toggle" for="loopToggle">
+        <input type="checkbox" id="loopToggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </section>
+
+  <!-- ── Status Info ───────────────────────────────────────────────────────── -->
+  <section class="info-bar" id="infoBar">
+    <div class="info-icon">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="10" stroke="#B06EFF" stroke-width="2"/>
+        <path d="M12 8v4M12 16h.01" stroke="#B06EFF" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <p id="infoText">Navigate to <strong>instagram.com/reels</strong> to get started.</p>
+  </section>
+
+  <!-- ── Footer ───────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <span>Made with</span>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="#FF6FD8">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+    <span>for Reel lovers</span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
